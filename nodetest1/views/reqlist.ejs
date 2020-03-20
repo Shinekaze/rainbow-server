@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Request List</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+<body>
+<h1>Request List</h1>
+    <u1>
+        <%
+        var list = '';
+        for (i = 0; i < reqlist.length; i++){
+            list += '<li>Bed Number: ' + reqlist[i].BedNumber + '</li>';
+        }
+        %>
+        <%- list %>
+    </u1>
+</body>
+</html>

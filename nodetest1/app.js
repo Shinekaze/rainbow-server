@@ -23,6 +23,11 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+//Open the interface for the DB to the routing program
+app.use(function(req,res,next){
+  req.db = db;
+  next();
+});
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
