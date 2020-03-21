@@ -17,11 +17,11 @@
         <%
         var list = '';
         for (i = 0; i < reqlist.length; i++){
-            list += '<li>Bed Number: ' + reqlist[i].BedNumber + ' Request Type: ' + reqlist[i].Help + ' Prio: ' + reqlist[i].Prio + ' Time Logged In: ' + reqlist[i].TimeIn +'</li>';
+            list += '<li>ID: ' + reqlist[i]._id + ' Bed Number: ' + reqlist[i].BedNumber + ' Request Type: ' + reqlist[i].Help + ' Prio: ' + reqlist[i].Prio + ' Time Logged In: ' + reqlist[i].TimeIn +'</li>';
         }
         %>
         <%- list %>
     </u1>
-    <li><a href = "index">Return to Index</a></li>
+    <li><a href = "personalindex">Return to Index</a></li>
 </body>
 </html>

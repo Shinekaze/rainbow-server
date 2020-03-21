@@ -38,31 +38,11 @@ router.get('/', function(req, res) {
 router.get('/index', function(req, res) {
   res.render('index', { title: 'Express' });
 });
-
-// direct to patient page
-router.get('/patient', function(req, res){
-  res.render('patient', {title: 'Express'});
+router.get('/personalindex', function(req, res) {
+  res.render('personalindex', { title: 'Express' });
 });
-
-//direct to nurse page
-router.get('/personal', function(req, res){
-  res.render('personal', {title: 'Express'});
-});
-
-//direct to page for adding new patient entries -------- to be modified/reused later
-router.get('/newpatient', function(req, res){
-  res.render('newpatient', {title: 'Express'});
-});
-
-//direct to page for basic output of database info ------ to be modified/reused later
-router.get('/reqlist', function(req, res){
-  var db = req.db;
-  var collection = db.get('usercollect');
-  collection.find({},{}, function (e, docs) {
-    res.render('reqlist',{
-          "reqlist" : docs
-    });
-  });
+router.get('/patientindex', function(req, res) {
+  res.render('patientindex', { title: 'Express' });
 });
 //====================================================================================================
 //This export function should remain the LAST LINE in the file
