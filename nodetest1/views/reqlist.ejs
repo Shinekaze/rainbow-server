@@ -3,14 +3,21 @@
 <head>
     <title>Request List</title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script type = "text/javascript">
+        <!--
+        function AutoRefresh( t ){
+            setTimeout("location.reload(true);", t)
+        }
+        //-->
+    </script>
 </head>
-<body>
+<body onload ="JavaScript:AutoRefresh(5000);">
 <h1>Request List</h1>
     <u1>
         <%
         var list = '';
         for (i = 0; i < reqlist.length; i++){
-            list += '<li>Bed Number: ' + reqlist[i].BedNumber + ' Request Type: ' + reqlist[i].Help + ' Prio: ' + reqlist[i].Prio + '</li>';
+            list += '<li>Bed Number: ' + reqlist[i].BedNumber + ' Request Type: ' + reqlist[i].Help + ' Prio: ' + reqlist[i].Prio + ' Time Logged In: ' + reqlist[i].TimeIn +'</li>';
         }
         %>
         <%- list %>

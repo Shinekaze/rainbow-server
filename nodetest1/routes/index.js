@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
-
-/*Post functionality for adding to database*/
+//===================================================================================================
+//Post functionality for adding Help Request records to database
 router.post('/addpatient', function(req, res){
   var db = req.db;
 
@@ -29,9 +29,9 @@ router.post('/addpatient', function(req, res){
     }
   });
 });
-
-
-/* GET home page - two possibilities for entry. */
+//===================================================================================================
+// GET functions - Routes requests to the proper html/ejs pages!
+//direct to homepage/index - two options!
 router.get('/', function(req, res) {
   res.render('index', { title: 'Express' });
 });
@@ -64,4 +64,6 @@ router.get('/reqlist', function(req, res){
     });
   });
 });
+//====================================================================================================
+//This export function should remain the LAST LINE in the file
 module.exports = router;
