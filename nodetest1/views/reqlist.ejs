@@ -10,10 +10,11 @@
         <%
         var list = '';
         for (i = 0; i < reqlist.length; i++){
-            list += '<li>Bed Number: ' + reqlist[i].BedNumber + '</li>';
+            list += '<li>Bed Number: ' + reqlist[i].BedNumber + ' Request Type: ' + reqlist[i].Help + ' Prio: ' + reqlist[i].Prio + '</li>';
         }
         %>
         <%- list %>
     </u1>
+    <li><a href = "index">Return to Index</a></li>
 </body>
 </html>
