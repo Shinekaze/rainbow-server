@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {font-family: Arial;}
+
+        /* Style the tab */
+        .tab {
+            overflow: hidden;
+            border: 1px solid #ccc;
+        }
+
+        /* Style the buttons inside the tab */
+        .tab pain {
+            background-color: #A020F0; float: left; border: 2px solid black; cursor: pointer;
+            padding: 14px 16px; transition: 0.3s; font-size: 17px; color: white;
+        }
+        /* Change background color of buttons on hover */
+        .tab pain:hover {
+            background-color: #ccc; color: black;
+        }
+        /* Create an active/current tablink class */
+        .tab pain.active {
+            background-color: white; color: black; border: 3px solid gold;
+        }
+
+        .tab hygiene {
+            background-color: #00308F; float: left; border: 2px solid black; cursor: pointer;
+            padding: 14px 16px; transition: 0.3s; font-size: 17px; color: white;
+        }
+        .tab hygiene:hover {
+            background-color: white; color: black;
+        }
+        .tab hygiene.active {
+            background-color: #ccc; color: black; border: 3px solid gold;
+        }
+
+        .tab medicine {
+            background-color: #FF7E00; float: left; border: 2px solid black; cursor: pointer;
+            padding: 14px 16px; transition: 0.3s; font-size: 17px; color: white;
+        }
+        .tab medicine:hover {
+            background-color: white; color: black;
+        }
+        .tab medicine.active {
+            background-color: #ccc; color: black; border: 3px solid gold;
+        }
+
+        .tab food {
+            background-color: #08E8DE; float: left; border: 2px solid black; cursor: pointer;
+            padding: 14px 16px; transition: 0.3s; font-size: 17px; color: white;
+        }
+        .tab food:hover {
+            background-color: white; color: black;
+        }
+        .tab food.active {
+            background-color: #ccc; color: black; border: 3px solid gold;
+        }
+
+        .tab other {
+            background-color: #8DB600; float: left; border: 2px solid black; cursor: pointer;
+            padding: 14px 16px; transition: 0.3s; font-size: 17px; color: white;
+        }
+        .tab other:hover {
+            background-color: white; color: black;
+        }
+        .tab other.active {
+            background-color: #ccc; color: black; border: 3px solid gold;
+        }
+
+        /* Style the tab content */
+        .tabcontent {
+            display: none;
+            padding: 6px 12px;
+            border: 1px solid #ccc;
+            border-top: none;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Tabs</h2>
+<p>Click on the buttons inside the tabbed menu:</p>
+
+<div class="tab">
+    <pain class="tablinks" onclick="openCity(event, 'pain')">Schmerzen</pain>
+    <hygiene class="tablinks" onclick="openCity(event, 'hygiene')">Hygiene</hygiene>
+    <medicine class="tablinks" onclick="openCity(event, 'medicine')">Medikamente</medicine>
+    <food class="tablinks" onclick="openCity(event, 'food')">Nahrungsmittel</food>
+    <other class="tablinks" onclick="openCity(event, 'other')">Sonstiges</other>
+</div>
+
+<div id="pain" class="tabcontent">
+    <h3>London</h3>
+    <p>London is the capital city of England.</p>
+</div>
+
+<div id="hygiene" class="tabcontent">
+    <h3>Paris</h3>
+    <p>Paris is the capital of France.</p>
+</div>
+
+<div id="medicine" class="tabcontent">
+    <h3>Tokyo</h3>
+    <p>Tokyo is the capital of Japan.</p>
+</div>
+
+<div id="food" class="tabcontent">
+    <h3>Tokyo</h3>
+    <p>Tokyo is the capital of Japan.</p>
+</div>
+
+<div id="other" class="tabcontent">
+    <h3>Tokyo</h3>
+    <p>Tokyo is the capital of Japan.</p>
+</div>
+
+<script>
+    function openCity(evt, cityName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(cityName).style.display = "block";
+        evt.currentTarget.className += " active";
+    }
+</script>
+
+</body>
+</html>
