@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        /* Lila */
+        .pain {
+            background-color: #A020F0; color: white; cursor: pointer; padding: 18px; width: 100%;
+            border: none; text-align: left; outline: none; font-size: 15px; transition: 0.5s;
+        }
+        .active, .pain:hover {
+            background-color: #ccc;
+        }
+
+        /* Blue navy */
+        .hygiene {
+                    background-color: #00308F; color: white; cursor: pointer; padding: 18px; width: 100%;
+                    border: none; text-align: left; outline: none; font-size: 15px; transition: 0.5s;
+        }
+        .active, .hygiene:hover {
+            background-color: #ccc;
+        }
+
+        /* Orange */
+        .medicine {
+            background-color: #FF7E00; color: white; cursor: pointer; padding: 18px; width: 100%;
+            border: none; text-align: left; outline: none; font-size: 15px; transition: 0.4s;
+        }
+        .active, .medicine:hover {
+            background-color: #ccc;
+        }
+
+        /* Türkis */
+        .food {
+            background-color: #08E8DE; color: white; cursor: pointer; padding: 18px; width: 100%;
+            border: none; text-align: left; outline: none; font-size: 15px; transition: 0.4s;
+        }
+        .active, .food:hover {
+            background-color: #ccc;
+        }
+
+        /* Grün */
+        .other {
+            background-color: #8DB600; color: white; cursor: pointer; padding: 18px; width: 100%;
+            border: none; text-align: left; outline: none; font-size: 15px; transition: 0.4s;
+        }
+        .active, .other:hover {
+            background-color: #ccc;
+        }
+
+        .panel {
+            padding: 0 18px;
+            display: none;
+            background-color: white;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Hochschule Karlsruhe</h2>
+
+<button class="pain">Schmerzen</button>
+<div class="panel">
+    <p>die Skala eingeben</p>
+</div>
+
+<button class="hygiene">Hygiene</button>
+<div class="panel">
+    <p>Auswahl (als Button) druecken</p>
+</div>
+
+<button class="medicine">Medikamente</button>
+<div class="panel">
+    <p>Auswahl (als Button) druecken</p>
+</div>
+
+<button class="food">Nahrungsmittel</button>
+<div class="panel">
+    <p>Auswahl (als Radio Button) druecken</p>
+</div>
+
+<button class="other">Sonstiges</button>
+<div class="panel">
+    <p>Eingabe geben</p>
+</div>
+
+<script>
+    var pain = document.getElementsByClassName("pain");
+    var i;
+
+    for (i = 0; i < pain.length; i++) {
+        pain[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.display === "block") {
+                panel.style.display = "none";
+            } else {
+                panel.style.display = "block";
+            }
+        });
+    }
+
+    var hygiene = document.getElementsByClassName("hygiene");
+    var i;
+
+    for (i = 0; i < hygiene.length; i++) {
+        hygiene[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.display === "block") {
+                panel.style.display = "none";
+            } else {
+                panel.style.display = "block";
+            }
+        });
+    }
+
+    var medicine = document.getElementsByClassName("medicine");
+    var i;
+
+    for (i = 0; i < medicine.length; i++) {
+        medicine[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.display === "block") {
+                panel.style.display = "none";
+            } else {
+                panel.style.display = "block";
+            }
+        });
+    }
+
+    var food = document.getElementsByClassName("food");
+    var i;
+
+    for (i = 0; i < food.length; i++) {
+        food[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.display === "block") {
+                panel.style.display = "none";
+            } else {
+                panel.style.display = "block";
+            }
+        });
+    }
+
+    var other = document.getElementsByClassName("other");
+    var i;
+
+    for (i = 0; i < other.length; i++) {
+        other[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.display === "block") {
+                panel.style.display = "none";
+            } else {
+                panel.style.display = "block";
+            }
+        });
+    }
+</script>
+
+</body>
+</html>
