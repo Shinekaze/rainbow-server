@@ -8,6 +8,9 @@ router.get('/personal', function(req, res){
 router.get('/personalindex', function(req, res){
   res.render('personalindex', {title: 'Express'});
 });
+router.get('/personalprotokoll', function(req, res){
+  res.render('personalprotokoll', {title: 'Express'});
+});
 //direct to page for basic output of database info ------ to be modified/reused later
 router.get('/reqlist', function(req, res){
   var db = req.db;
