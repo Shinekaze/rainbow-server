@@ -25,7 +25,7 @@ router.post('/addpatient', function(req, res){
     }
     else{
       //forward to patient page
-      res.redirect("patient");
+      res.redirect("patient/patient");
     }
   });
 });
