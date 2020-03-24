@@ -3,13 +3,21 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
     .btn {
-        border: 2px solid black;
+        border: 2px solid #000000;
         background-color: #FFFFFF;
-        color: black;
+        color: #000000;
         padding: 26px;
         border-radius: 10px;
         font-size: 16px;
         cursor: pointer;
+    }
+
+    .date {
+        position: absolute; right: 5%; top: 1%; font-size: 14px; color: #556b2f;
+    }
+
+    .time {
+        position: absolute; right: 5%; top: 4%; font-size: 14px; color: #556b2f;
     }
 
     /* Lila */
@@ -26,7 +34,7 @@
 
     /* Create an active/current tablink class */
     .schmerzen.active {
-        background-color: #FFFFFF; color: #000000; border: 3px solid gold;
+        background-color: #FFFFFF; color: #000000; border: 3px solid #ffd700;
     }
 
     /* Navy-Blue */
@@ -40,7 +48,7 @@
         color: #00308F;
     }
     .hygiene.active {
-        background-color: #FFFFFF; color: #000000; border: 3px solid gold;
+        background-color: #FFFFFF; color: #000000; border: 3px solid #ffd700;
     }
 
     /* Orange */
@@ -54,7 +62,7 @@
         color: #FF7E00;
     }
     .medikamente.active {
-        background-color: #FFFFFF; color: #000000; border: 3px solid gold;
+        background-color: #FFFFFF; color: #000000; border: 3px solid #ffd700;
     }
 
     /* Türkis */
@@ -69,7 +77,7 @@
         color: #08E8DE;
     }
     .nahrungsmittel.active {
-        background-color: #FFFFFF; color: #000000; border: 3px solid gold;
+        background-color: #FFFFFF; color: #000000; border: 3px solid #ffd700;
     }
 
     /* Grün */
@@ -84,7 +92,7 @@
         color: #8DB600;
     }
     .sonstiges.active {
-        background-color: #FFFFFF; color: #000000; border: 3px solid gold;
+        background-color: #FFFFFF; color: #000000; border: 3px solid #ffd700;
     }
 </style>
 <head>
@@ -92,6 +100,16 @@
 <body>
 
 <h1>Hochschule Karlsruhe</h1>
+
+<p class="date"><span id="datum"></span></p>
+<p class="time"><span id="zeit"></span></p>
+
+<script>
+    var dt = new Date();
+    document.getElementById("datum").innerHTML = ((("0"+dt.getDate()).slice(-2)) +"."+ (("0"+(dt.getMonth()+1)).slice(-2)) +"."+ (dt.getFullYear()));
+    var tm = new Date();
+    document.getElementById("zeit").innerHTML = ((("0"+tm.getHours()).slice(-2)) +":"+ (("0"+tm.getMinutes()).slice(-2) ));
+</script>
 
 <button onclick="window.location.href ='2a'" class="btn schmerzen"><b>Schmerzen</b></button>
 <button onclick="window.location.href ='2b'" class="btn hygiene"><b>Hygiene</b></button>
