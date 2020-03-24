@@ -7,7 +7,11 @@
         }
 
         .date {
-            position: absolute; right: 5%; font-size: large;
+            position: absolute; right: 5%; font-size: 14px; color: #556b2f;
+        }
+
+        .time {
+            position: absolute; right: 5%; top: 4%; font-size: 14px; color: #556b2f;
         }
 
         .bedinfo {
@@ -56,7 +60,16 @@
 
 <p class="title">HSKA</p>
 
-<p class="date">18.03.2020</p>
+<p class="date"><span id="datum"></span></p>
+<p class="time"><span id="zeit"></span></p>
+
+<script>
+    var dt = new Date();
+    document.getElementById("datum").innerHTML = ((("0"+dt.getDate()).slice(-2)) +"."+ (("0"+(dt.getMonth()+1)).slice(-2)) +"."+ (dt.getFullYear()));
+    var tm = new Date();
+    document.getElementById("zeit").innerHTML = ((("0"+tm.getHours()).slice(-2)) +":"+ (("0"+tm.getMinutes()).slice(-2) ));
+</script>
+
 <p class="scale">Nahrungsmittel-Eingabe</p>
 
 <p class="labeling">Was benoetigen Sie</p>
