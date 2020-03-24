@@ -12,6 +12,14 @@
         cursor: pointer;
     }
 
+    .date {
+        position: absolute; right: 5%; top: 1%; font-size: 14px; color: #556b2f;
+    }
+
+    .time {
+        position: absolute; right: 5%; top: 4%; font-size: 14px; color: #556b2f;
+    }
+
     /* Lila */
     .schmerzen {
         background-color: #A020F0;
@@ -92,6 +100,16 @@
 <body>
 
 <h1>Hochschule Karlsruhe</h1>
+
+<p class="date"><span id="datum"></span></p>
+<p class="time"><span id="zeit"></span></p>
+
+<script>
+    var dt = new Date();
+    document.getElementById("datum").innerHTML = ((("0"+dt.getDate()).slice(-2)) +"."+ (("0"+(dt.getMonth()+1)).slice(-2)) +"."+ (dt.getFullYear()));
+    var tm = new Date();
+    document.getElementById("zeit").innerHTML = ((("0"+tm.getHours()).slice(-2)) +":"+ (("0"+tm.getMinutes()).slice(-2) ));
+</script>
 
 <button onclick="window.location.href ='2a'" class="btn schmerzen"><b>Schmerzen</b></button>
 <button onclick="window.location.href ='2b'" class="btn hygiene"><b>Hygiene</b></button>
